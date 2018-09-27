@@ -6,6 +6,9 @@
 def main(args):
     a = int(input("podaj 1. liczbę"))
     b = int(input("podaj 2. liczbę"))
+    while a >= b:
+        print ("Błąd")
+        b = int(input("podaj 2. liczbę"))
     if a >= b:
         print ("Błędne dane!")
         exit(0)
