@@ -9,14 +9,10 @@ def main(args):
         print("Błędne dane!")
         n = int(input("podaj 1. liczbę"))
         
-    m = int(input("podaj 2. liczbę"))
-    while m <= n:
-        print("Błędne dane!")
-        m = int(input("podaj 2. liczbę"))
 #pobieranie        
 
-    for liczba in range (n, m + 1):
-        print (liczba, " ", end="")
+    for liczba in range (n + 1):
+        print (liczba * liczba, " ", end="")
     return 0
 
 if __name__ == '__main__':
