@@ -12,8 +12,6 @@ int zlicz(char tab[]){
     while (tab[i] != '\0') i++;
     return i;
 }
-
-
 void drukuj(char tab[], int roz) { 
     for(int i = 0; i <roz; i++){
         cout << tab[i] << " ";
@@ -21,49 +19,14 @@ void drukuj(char tab[], int roz) {
 }
 
 
-void ascii(char tab[], int roz) {
-    int kod = 0; //kod ascii znaku
-    for(int i = 0; i <roz; i++){
-        kod = (int)tab[i];
-        if (kod > 96 && kod <123)
-            cout << (int)tab[i];
-        else
-            cout << (int)tab[i] << " ";
-            
-    }
-}
-
-
 void liczznaki(char tab[], int roz) {
         int spacje = 0;
         int interpunkcja = 0;
-        int symbole = 0;
-        int reszta = 0;
-        for(int i=0; i<roz; i++){
-            //~if (tab[i]) == ' ' spacje++
-            //~else if (tab[i] == '.' || tab[i] ',')
-                //~interpunkcja++
-        switch(tab[i]) {
-            case ' ':
-            case '\t':
-                spacje++;
-            break;
-            case '.':
-            case ',':
-                interpunkcja++;
-            break;
-            case '(':
-            case ')':
-                symbole++;
-            break;
-            default:
-                reszta++;
-            }
-    }
-    cout << "spacje:" << spacje << endl;
-    cout << "interpunkcja:" << interpunkcja << endl;
-    cout << "symbole:" << symbole << endl;
-    cout << "reszta:" << reszta << endl;
+        for(int i=0; i<roz; i++)
+            if (tab[i]) == ' ' spacje++
+            else if (tab[i] == '.' || tab[i] ',')
+                interpunkcja++
+                
 }
 
 int main(int argc, char **argv)
@@ -74,7 +37,6 @@ int main(int argc, char **argv)
     // cin >> tab;
     //cin.getline(tab, rozmiar);
     cout << "Cześć " << tab << "!" << endl;
-    ascii(tab, zlicz(tab));
-    liczznaki(tab, zlicz(tab));
+    drukuj(tab, zlicz(tab));
 	return 0;
 }

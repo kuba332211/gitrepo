@@ -15,7 +15,10 @@ def potega_it(a, n):
     return wynik
 
 def main(args):
-    print("potęga {} do {} wynosi {}".format(a, n, potega_it(a, n))):
+    #print("potęga {} do {} wynosi {}".format(a, n, potega_it(a, n))):
+    assert(potega_it(2,2)) == 4)
+    assert(potega_it(1,0)) == 4)
+    assert(potega_it(2,2)) == 4)
     return 0
 
 if __name__ == '__main__':
